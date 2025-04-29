@@ -16,5 +16,5 @@ public class Booking {
     private LocalDateTime dateTime;
     private String serviceId;
     private String userId;
-    
+
 }
