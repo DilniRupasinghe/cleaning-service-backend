@@ -12,30 +12,35 @@ import java.util.Optional;
 @RequestMapping("/bookings")
 @CrossOrigin(origins = "*")
 public class BookingController {
+
     @Autowired
     private BookingRepository bookingRepository;
 
+    // Get all bookings for a specific user
     @GetMapping("/user/{userId}")
     public List<Booking> getBookingsByUser(@PathVariable String userId) {
         return bookingRepository.findByUserId(userId);
     }
 
+    // Create a new booking
     @PostMapping
     public Booking createBooking(@RequestBody Booking booking) {
-       return bookingRepository.save(booking);
+        return bookingRepository.save(booking);
     }
 
+    // Update an existing booking
     @PutMapping("/{id}")
     public Booking updateBooking(@PathVariable String id, @RequestBody Booking updatedBooking) {
         Optional<Booking> existingBooking = bookingRepository.findById(id);
         if (existingBooking.isPresent()) {
             updatedBooking.setId(id);
-            return bookingRepository.save(updatedBooking);
-        }else{
+            return (Booking) bookingRepository.save(updatedBooking);
+        } else {
             throw new RuntimeException("Booking not found");
         }
     }
 
+    // Delete a booking
     @DeleteMapping("/{id}")
     public void deleteBooking(@PathVariable String id) {
         bookingRepository.deleteById(id);
