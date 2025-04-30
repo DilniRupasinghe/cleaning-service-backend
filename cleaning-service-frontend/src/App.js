@@ -2,14 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
-import {
-  Pencil,
-  Trash2,
-  CalendarDays,
-  MapPin,
-  User,
-  Sparkles,
-} from "lucide-react";
 
 export default function App() {
   const [bookings, setBookings] = useState([]);
