@@ -1,0 +1,121 @@
+/* App.css */
+
+body {
+  background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  color: #4a148c;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.form-container {
+  background: #fefefe;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 3rem;
+  border-left: 6px solid #8e24aa;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #8e24aa;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #6a1b9a;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #4a148c;
+}
+
+.booking-list {
+  width: 100%;
+  max-width: 900px;
+}
+
+.booking-card {
+  background: #fff8f1;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  border-left: 6px solid #ff6f00;
+}
+
+.booking-card p {
+  margin: 0.5rem 0;
+  color: #3e3e3e;
+  font-size: 0.95rem;
+}
+
+.booking-actions button {
+  margin-left: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.booking-actions .edit-btn {
+  background-color: #039be5;
+  color: white;
+}
+
+.booking-actions .edit-btn:hover {
+  background-color: #0277bd;
+}
+
+.booking-actions .delete-btn {
+  background-color: #e53935;
+  color: white;
+}
+
+.booking-actions .delete-btn:hover {
+  background-color: #b71c1c;
+}
